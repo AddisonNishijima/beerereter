@@ -11,10 +11,8 @@ _Beer beer beer beer_
 * I want to see a display of how many pints are left in a keg. A full keg has 124 pints in it.. I want to be able to click a button on a display of a keg whenever I sell a pint of that kind of beer and have the display of how many pints are left decrease by 1. _keg model sellPint function_
 * I want to be able to see all the kegs that have less than 10 pints left so that I can be ready to change them. _filter on keg-list component_
 * I want to be able to edit a keg's properties after entering them. _edit-keg component_
-* I want to have kegs color coded to show me at a glance if they are cheap or expensive - say greater or less than $5 per pint. I also want to use the alcohol content property to display stronger beers differently than weaker beers. _p sure this is front end?_
-
-
-
+* I want to have kegs color coded to show me at a glance if they are cheap or expensive - say greater or less than $5 per pint. I also want to use the alcohol content property to display stronger beers differently than weaker beers. I want some change in display for kegs that are running low _p sure this is front end?_
+* I want an empty keg to be removed from the list automagically OR I want to be able to remove kegs from the list myself
 
 ## Setup/Installation Requirements
 
