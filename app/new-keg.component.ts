@@ -19,7 +19,7 @@ import { Keg } from './keg.model';
   </div>
   <div class="form-group">
     <label>Enter New Keg ABV</label>
-    <input class="form-control" #newABV>
+    <input type="number" class="form-control" #newABV>
   </div>
   <button class="btn btn-success center-block" (click)="addClicked(newName.value, newBrand.value, newPrice.value, newABV.value)">Add</button>
   `
@@ -27,7 +27,7 @@ import { Keg } from './keg.model';
 
 export class NewKegComponent {
   @Output() newKegSender = new EventEmitter();
-  addClicked(name: string, brand: string, price: number, abv: string) {
+  addClicked(name: string, brand: string, price: number, abv: number) {
     var newKegToAdd: Keg = new Keg(name, brand, price, abv);
     this.newKegSender.emit(newKegToAdd);
   }

@@ -1,6 +1,8 @@
 h1 {
   color: black;
   text-align: center;
+  font-family: 'Rye', cursive;
+  font-size: 60px;
 }
 
 body {
@@ -22,6 +24,7 @@ body {
   margin: 1rem;
   border-radius: 5px;
   color: #E58A3A;
+  font-family: 'Rye', cursive;
 }
 
 .beer-row {
@@ -41,4 +44,20 @@ body {
 
 .beer-row-2 {
   font-size: medium;
+}
+
+.col-md-4 {
+  font-family: 'Rye', cursive;
+  color: #883412;
+}
+
+.forms {
+  background-color: rgba(200, 200, 200, 0.7);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+select {
+  margin-left: 1rem;
 }

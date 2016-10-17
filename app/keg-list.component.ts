@@ -5,11 +5,6 @@ import { EmptinessPipe } from './emptiness.pipe';
 @Component ({
   selector: 'keg-list',
   template:`
-    <select (change)="onChange($event.target.value)">
-      <option value="all">Show all</option>
-      <option value="nearlyEmpty">Show nearly empty</option>
-      <option value="notEmpty">Show mostly full</option>
-    </select>
     <div class="beer" *ngFor="let currentKeg of childKegList | emptiness: selectedEmptiness">
       <div class="row beer-row">
         <div class="col-sm-5">
@@ -30,16 +25,21 @@ import { EmptinessPipe } from './emptiness.pipe';
         {{currentKeg.brand}}
         </div>
         <div class="col-sm-3">
-        \${{currentKeg.price}}
+        <span *ngIf="currentKeg.price > 5">$</span>\${{currentKeg.price}}
         </div>
         <div class="col-sm-3">
-        {{currentKeg.abv}}
+        {{currentKeg.abv}}% <i *ngIf="currentKeg.abv > 5" class="fa fa-star"></i>
         </div>
         <div class="col-sm-3">
         {{currentKeg.pintsLeft}} pours left
         </div>
       </div>
     </div>
+    <select (change)="onChange($event.target.value)">
+      <option value="all">Show all</option>
+      <option value="nearlyEmpty">Show nearly empty</option>
+      <option value="notEmpty">Show mostly full</option>
+    </select>
   `,
 })
 
