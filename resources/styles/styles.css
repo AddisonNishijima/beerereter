@@ -1,3 +1,44 @@
 h1 {
-  color: blue;
+  color: black;
+  text-align: center;
+}
+
+body {
+  background-image: url(../../resources/images/bar2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: rgba(180, 180, 180, 0.5);
+  margin-top: 2rem;
+  border-radius: 5px;
+  padding-bottom: 2rem;
+}
+
+.beer {
+  background-color: rgba(50, 50, 50, 0.9);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  color: #E58A3A;
+}
+
+.beer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.beer-row h3{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.beer-row > [class*='col-']{
+  display: flex;
+  align-items: center;
+}
+
+.beer-row-2 {
+  font-size: medium;
 }

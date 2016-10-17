@@ -5,7 +5,7 @@ import { Keg } from './keg.model';
   selector: 'edit-keg',
   template: `
   <div *ngIf="childSelectedKeg">
-    <h1>Edit Keg</h1>
+    <h3>Edit Keg</h3>
     <div>
       <label>Enter Keg Name:</label>
       <input [(ngModel)]="childSelectedKeg.name">

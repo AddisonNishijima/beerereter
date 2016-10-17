@@ -6,18 +6,24 @@ import {Keg} from './keg.model';
   template: `
   <div class="container">
     <h1>Beerereter</h1>
-    <keg-list
-      [childKegList]="masterKegList"
-      (clickSender)="showDetails($event)"
-    ></keg-list>
-    <edit-keg
-      [childSelectedKeg] = "selectedKeg"
-      (doneClickedSender)="finishedEditing()"
-    >
-    </edit-keg>
-    <new-keg
-      (newKegSender)="addKeg($event)"
-    ></new-keg>
+    <div class="row">
+    <div class="col-md-7">
+      <keg-list
+        [childKegList]="masterKegList"
+        (clickSender)="showDetails($event)"
+      ></keg-list>
+      </div>
+      <div class='col-md-5'>
+      <new-keg
+        (newKegSender)="addKeg($event)"
+      ></new-keg>
+      <edit-keg
+        [childSelectedKeg] = "selectedKeg"
+        (doneClickedSender)="finishedEditing()"
+      >
+      </edit-keg>
+      </div>
+    </div>
   </div>
   `
 })
