@@ -24,7 +24,7 @@ import { EmptinessPipe } from './emptiness.pipe';
         <div class="col-sm-3">
         {{currentKeg.brand}}
         </div>
-        <div class="col-sm-3 {{ currentKeg.priciness }}">
+        <div class="col-sm-3" [ngClass]="{'sopricey': currentKeg.price > 5}">
         <span *ngIf="currentKeg.price > 5">$</span>\${{currentKeg.price}}
         </div>
         <div class="col-sm-3">
