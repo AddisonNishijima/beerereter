@@ -7,10 +7,21 @@ import {Keg} from './keg.model';
 })
 
 export class EmptinessPipe implements PipeTransform {
-  transform(input: Keg[], info){
+  transform(input: Keg[], filter, sort){
     var output: Keg[] = [];
-    console.log(info);
-    var desiredEmptiness = info;
+    var desiredEmptiness = filter;
+    var desiredSort = sort;
+    console.log(desiredSort);
+    console.log(desiredEmptiness);
+    input.sort(function(a, b){
+      if(a[sort] > b[sort]){
+        return 1;
+      }
+      if(a[sort] > b[sort]){
+        return -1;
+      }
+      return 0;
+    });
     if(desiredEmptiness === "nearlyEmpty"){
       for (var i = 0; i < input.length; i++){
         if(input[i].pintsLeft < 10){

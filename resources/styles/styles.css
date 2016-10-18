@@ -21,7 +21,10 @@ body {
 .beer {
   background-color: rgba(50, 50, 50, 0.9);
   padding: 1rem;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: -1rem;
   border-radius: 5px;
   color: #E58A3A;
   font-family: 'Rye', cursive;
@@ -40,6 +43,10 @@ body {
 .beer-row > [class*='col-']{
   display: flex;
   align-items: center;
+}
+
+.beer-row > .col-sm-4 {
+  justify-content: space-around;
 }
 
 .beer-row-2 {
@@ -63,7 +70,7 @@ select {
 }
 
 .sopricey {
-  color: rebeccapurple;
+  color: #F8C15D;
 }
 
 .notpricey {

@@ -36,7 +36,8 @@ export class AppComponent {
     new Keg("Wassail", "Full Sail", 4, 7.2),
     new Keg("Sleigh'r", "Ninkasi", 6, 7.2),
     new Keg("Pray For Snow", "10 Barrel", 3, 7.6),
-    new Keg("Nutcracker", "Boulevard", 5.50, 7.8)
+    new Keg("Nutcracker", "Boulevard", 5.50, 7.8),
+    new Keg("Extremely Long Beer Name", "Asshat Brewing", 2, 4)
   ];
   addKeg(newKegFromChild: Keg) {
     this.masterKegList.push(newKegFromChild);
